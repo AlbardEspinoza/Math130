@@ -1,4 +1,4 @@
-public class Person {
+public class Person {//Person variable
     //Instance variables
     private String firstName;//Anything private can only be used in the same class the private variable is.
     private String lastName;
