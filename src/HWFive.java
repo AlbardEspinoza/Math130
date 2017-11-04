@@ -38,12 +38,15 @@ public class HWFive {//This code was created by Albard Espinoza. //TODO; write t
         return sum;
     }
 
-    public static double computeRowSums(double[][] arrDouble) {
-        double sum = 0.0;
+    public static double[] computeRowSums(double[][] arrDouble) {
+        double[] sum = {};
         for (int rows = 0; rows < arrDouble.length; rows++) {
             for (int col = 0; col < arrDouble[rows].length; col++) {
-
+                double total = 0.0;
+                total += arrDouble[rows][col];
+                sum[rows] = total;
             }
         }
+        return sum;
     }
 }

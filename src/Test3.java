@@ -18,9 +18,21 @@ public class Test3 {
         return sum;
     }
 
+    public static double[] computeRowSums(double[][] arrDouble) {
+        double[] sum = {};
+        for (int rows = 0; rows < arrDouble.length; rows++) {
+            for (int col = 0; col < arrDouble[rows].length; col++) {
+                double total = 0.0;
+                total += arrDouble[rows][col];
+                sum[rows] = total;
+            }
+        }
+        return sum;
+    }
+
     public static void main(String[] args){
-        String[] words = {"ChsarDacDdter", "ROsDGWS", "LSDogs"};
-        int total = getNumberOfUpperCase(words);
+        double[][] numbers = {{2,-3.2,3},{3.4,2,4.5}};
+        double[] total = computeRowSums(numbers);
         System.out.println(total);
     }
 }
