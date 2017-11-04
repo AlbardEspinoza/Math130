@@ -24,4 +24,3 @@ public class Person {
         lastName = nLastName;
     }
 }
-//TODO; ask Edwin about GitHub in this project
