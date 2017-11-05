@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class HWFive {//This code was created by Albard Espinoza. //TODO; write the last time you worked on this code
 
     //I'm going to use a "for loop" to be able to compute the difference of the whole array.
@@ -37,16 +39,56 @@ public class HWFive {//This code was created by Albard Espinoza. //TODO; write t
         }
         return sum;
     }
-
+    //I had a little bit of trouble crating this method since every time I ran it it gave the correct answer for row 0, but not for 1 and 2.
+    //Then I realized that the value for total didn't reset back to 0 when the for loop ended it just kept adding up the other rows with the previous rows value.
+    //So I just added a line that made value of total reset back to 0 after the for loop ended.
     public static double[] computeRowSums(double[][] arrDouble) {
-        double[] sum = {};
+        double[] rowSums = new double[arrDouble.length];
+        double total = 0.0;
         for (int rows = 0; rows < arrDouble.length; rows++) {
             for (int col = 0; col < arrDouble[rows].length; col++) {
-                double total = 0.0;
                 total += arrDouble[rows][col];
-                sum[rows] = total;
             }
+            rowSums[rows] = total;
+            total = 0;
         }
-        return sum;
+        return rowSums;
+    }
+
+    public static void main(String[] args) {
+        int[] arrOne = {99, 11, 200, -15, 10001, 99, -23451, 2};
+        int[] arrTwo = {18, 18, 18};
+
+        System.out.print("The difference between the largest values in arrOne: ");
+        System.out.println(getDifference(arrOne));
+        System.out.print("The difference between the largest values in arrTwo: ");
+        System.out.println(getDifference(arrTwo));
+        System.out.println();
+
+        String entry;
+        String repeat;
+        Scanner in = new Scanner(System.in);
+        do {
+            System.out.print("Enter a string: ");
+            entry = in.next();
+            System.out.print("# of upper-case characters in " + entry + " = ");
+            System.out.println(getNumberUpperCase(entry) + "\n");
+            System.out.println("Do you want to enter another string?");
+            System.out.println("Enter y or Y for yes or any other value for no");
+            repeat = in.next();
+        } while (repeat.equalsIgnoreCase("y"));
+
+        String[] list = {"catHouse", "b23ookS", "ST34ourz", "MAdiS**N"};
+        System.out.print("\nThe number of upper-case characters in the list array: ");
+        System.out.println(getNumberOfUpperCase(list));
+
+        double[][] arrD = {{0.0, 88.2, -12323.23, 7662.342},
+                {0.0, 0.0}, {-2123.0232, 23323.001, -8.0, -7.0, 16.0}};
+
+        double[] sums = computeRowSums(arrD);
+        System.out.println("\nRow Sums for arrD: ");
+        for (int i = 0; i < arrD.length; i++) {
+            System.out.println("sum of row " + i + " = " + sums[i]);
+        }
     }
 }
