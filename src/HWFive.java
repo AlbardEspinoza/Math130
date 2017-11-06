@@ -1,6 +1,6 @@
 import java.util.Scanner;
-
-public class HWFive {//This code was created by Albard Espinoza. //TODO; write the last time you worked on this code
+public class HWFive {//This code was created by Albard Espinoza. The last time I worked on this code was 11/04/17 at 9:30P.M.
+// TODO; write the last time you worked on this code
 
     //I'm going to use a "for loop" to be able to compute the difference of the whole array.
     public static int getDifference(int[] array) {
