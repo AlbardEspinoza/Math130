@@ -6,7 +6,7 @@ public class Sort {
             for (int y = x; y < num.length; y++) {
                 int smallest = num[x];
                 if (smallest > num[y]) {
-                    num[x] = num[y];//These two lines basically make the values swap places making the smaller be at index 0 and the value that was at the index 0 be at
+                    num[x] = num[y];//These two lines basically make the values swap places making the smallest number be at index 0 and the value that was at the number at index 0 be at the index the smaller number was.
                     num[y] = smallest;
                 }
             }
@@ -15,7 +15,7 @@ public class Sort {
     }
 
     public static void main(String[] args) {
-        int[] list = {5,4,3,2,1};
+        int[] list = {-100,3,4,-12,78};
         int[] answer = sort(list);
         System.out.println(Arrays.toString(answer));
         int plus = 0;
