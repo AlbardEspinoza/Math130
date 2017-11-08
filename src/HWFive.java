@@ -1,6 +1,6 @@
 import java.util.Scanner;
-public class HWFive {//This code was created by Albard Espinoza. The last time I worked on this code was 11/04/17 at 9:30P.M.
-// TODO; write the last time you worked on this code
+
+public class HWFive {//This code was created by Albard Espinoza. The last time I worked on this code was 11/07/17 at 7:34P.M.
 
     //I'm going to use a "for loop" to be able to compute the difference of the whole array.
     public static int getDifference(int[] array) {
@@ -39,6 +39,7 @@ public class HWFive {//This code was created by Albard Espinoza. The last time I
         }
         return sum;
     }
+
     //I had a little bit of trouble creating this method since every time I ran it it gave the correct answer for row 0, but not for 1 and 2.
     //Then I realized that the value for total didn't reset back to 0 when the for loop ended it just kept adding up the other rows with the previous rows value.
     //So I just added a line that made value of total reset back to 0 after the for loop ended.
