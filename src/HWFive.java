@@ -16,7 +16,7 @@ public class HWFive {//This code was created by Albard Espinoza. The last time I
                 largest = array[y];
             }
         }
-        return smallest + largest;
+        return largest - smallest;
     }
 
     //I'm going to use the "char.At()" method to be able to extract the char that I want to be tested in the boolean statement.
@@ -39,7 +39,7 @@ public class HWFive {//This code was created by Albard Espinoza. The last time I
         }
         return sum;
     }
-    //I had a little bit of trouble crating this method since every time I ran it it gave the correct answer for row 0, but not for 1 and 2.
+    //I had a little bit of trouble creating this method since every time I ran it it gave the correct answer for row 0, but not for 1 and 2.
     //Then I realized that the value for total didn't reset back to 0 when the for loop ended it just kept adding up the other rows with the previous rows value.
     //So I just added a line that made value of total reset back to 0 after the for loop ended.
     public static double[] computeRowSums(double[][] arrDouble) {
