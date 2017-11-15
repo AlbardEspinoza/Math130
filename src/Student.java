@@ -16,6 +16,56 @@ public class Student { //This code was created by Albard Espinoza. //TODO; write
         this.grades = grades;
     }
 
-    public String getFirstName(){return firstName;}
+    /*You don't need a parameter in the get methods because you're simply "returning" a
+    * value stored in the variable that called the method, also when the user calls the
+    * method to get the value it does'nt "send" any data over to the method so it's
+    * ambiguous to have a parameter since you're not gonna store anything in it/*/
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public int[] getGrades() {
+        return grades;
+    }
+
+    /*Remember the "this.firstName" refers to the instance variable, the
+    * "firstName" that is being stored into "this.firstName" refers to the
+    * variable in the method's parameter. Remember that you can't have a parameter
+    * variable and a local variable with the same name.*/
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setGrades(int[] grades) {
+        this.grades = grades;
+    }
+
+    public int getHighestGrade() {
+        int x = grades[0];
+        for (int y = 0; y < grades.length; y++) {
+            if (x < grades[y]) {
+                x = grades[y];
+            }
+        }
+        return x;
+    }
+
+    public int getLowestGrade() {
+        int x = grades[0];
+        for (int y = 0; y < grades.length; y++) {
+            if (x > grades[y]) {
+                x = grades[y];
+            }
+        }
+        return x;
+    }
 
 }
