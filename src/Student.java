@@ -1,15 +1,21 @@
-public class Student extends Person2 {
-    private String major;
+public class Student { //This code was created by Albard Espinoza. //TODO; write the last time you worked on this code
 
-    public Student(String firstName, String lastName, String major) {
-        super(firstName, lastName);//This line of code is calling the constructor in the parent graph.
-        this.major = major;
+    /*Instance variables are the ones that make the value(s) of the variable received
+    visible to the whole class.*/
+    private String firstName;
+    private String lastName;
+    private int[] grades;
+
+    /*The constructor method is the first one to be accessed when an object referring to
+    * the same class as the constructor is created. The constructor sets the instance variable(s) to
+    * the value that it receives(if any) and now all the methods in the class can access
+    * or "view" the same value.*/
+    public Student(String firstName, String lastName, int[] grades) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.grades = grades;
     }
 
-    public String toString() {
-        return super.toString() + " major = " + major;
-    }/*Method overriding, its basically adding a little bit more code to the method.
-    You are basically taking advantage that you already have a method that you need to start or complete another method, and you just add a whatever extra code you need to finish it.*/
-    //super.toString is calling the method in the parent graph.
+    public String getFirstName(){return firstName;}
 
 }
