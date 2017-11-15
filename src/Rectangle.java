@@ -3,7 +3,7 @@ public class Rectangle {
     private double length;
     private double width;
 
-    public Rectangle(double ilength, double iwidth) {//Remeber theres no return type for the constructors.
+    public Rectangle(double ilength, double iwidth) {//Remember there's no return type for the constructors.
         length = ilength;
         width = iwidth;
     }
@@ -28,3 +28,5 @@ public class Rectangle {
         return length * width;
     }
 }
+
+//TODO; finish comments about constructor methods, why it does'nt have static, and void.
