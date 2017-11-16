@@ -68,11 +68,11 @@ public class Student { //This code was created by Albard Espinoza. //TODO; write
         return x;
     }
 
-    public int[] getNumberPassing() {//TODO; tell the professor that you changed the method header because the method has to return an int[] not an int.
-        int[] x = new int[grades.length];
+    public int getNumberPassing() {//TODO; tell the professor that you changed the method header because the method has to return an int[] not an int.
+        int x = 0;
         for (int y = 0; y < grades.length; y++) {
             if (grades[y] >= 70) {
-                x[y] = grades[y];
+                x++;
             }
         }
         return x;
