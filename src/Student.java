@@ -8,7 +8,7 @@ public class Student { //This code was created by Albard Espinoza. //TODO; write
 
     /*The constructor method is the first one to be accessed when an object referring to
     * the same class as the constructor is created. The constructor sets the instance variable(s) to
-    * the value that it receives(if any) and now all the methods in the class can access
+    * the value that it receives and now all the methods in the class can access
     * or "view" the same value.*/
     public Student(String firstName, String lastName, int[] grades) {
         this.firstName = firstName;
@@ -68,4 +68,17 @@ public class Student { //This code was created by Albard Espinoza. //TODO; write
         return x;
     }
 
+    public int[] getNumberPassing() {//TODO; tell the professor that you changed the method header because the method has to return an int[] not an int.
+        int[] x = new int[grades.length];
+        for (int y = 0; y < grades.length; y++) {
+            if (grades[y] >= 70) {
+                x[y] = grades[y];
+            }
+        }
+        return x;
+    }
+
 }
+
+
+//TODO; Type short comment before each method.
