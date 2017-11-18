@@ -5,15 +5,13 @@ public class HWFive {//This code was created by Albard Espinoza. The last time I
     //I'm going to use a "for loop" to be able to compute the difference of the whole array.
     public static int getDifference(int[] array) {
         int smallest = array[0];
+        int largest = array[0];//Can two variables be assigned the same array value?
         for (int x = 0; x < array.length; x++) {
             if (smallest > array[x]) {
                 smallest = array[x];
             }
-        }
-        int largest = array[0];//Can two variables be assigned the same array value?
-        for (int y = 0; y < array.length; y++) {
-            if (largest < array[y]) {
-                largest = array[y];
+            if (largest < array[x]) {
+                largest = array[x];
             }
         }
         return largest - smallest;

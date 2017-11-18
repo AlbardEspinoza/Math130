@@ -9,5 +9,10 @@ public class Test {
         p.setLastName("Ochoa");
         System.out.println("Name = " + p.getFirstName() + " " + p.getLastName());
         System.out.println("Name = " + p);//Why does this line of code have that output?
+
+        Student2 m = new Student2("Raymond ", "Martinez", "Physics");/*Here is an example of how you created a Student 2 object
+        and since the Student 2 class extends the Person2 class it inherits all its methods. So when you create an object from the Student2 class your basically getting all the
+        all the data methods and code from the Person2 class.*/
+        System.out.println(m.toString());
     }
 }
