@@ -7,7 +7,7 @@ public class HWFive {//This code was created by Albard Espinoza. The last time I
         int smallest = array[0];
         int largest = array[0];//Can two variables be assigned the same array value?
         for (int x = 0; x < array.length; x++) {
-            if (smallest > array[x]) {
+            if (smallest > array[x]) {//TODO; learn the rules of if, else if, else.
                 smallest = array[x];
             }
             if (largest < array[x]) {
@@ -20,7 +20,7 @@ public class HWFive {//This code was created by Albard Espinoza. The last time I
     //I'm going to use the "char.At()" method to be able to extract the char that I want to be tested in the boolean statement.
     public static int getNumberUpperCase(String str) {//In this method you can create another variable called x because it's "outside" of the scope of the previous method.
         int sum = 0;
-        for (int x = 0; x < str.length(); x++) {//TODO; learn string methods with parentheses .lenght()
+        for (int x = 0; x < str.length(); x++) {//TODO; learn string methods with parentheses .lenght(), .charAt().
             if (str.charAt(x) >= 'A' && str.charAt(x) <= 'Z') {
                 sum++;
             }
