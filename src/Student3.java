@@ -72,6 +72,8 @@ public class Student3 { //This code was overwritten by Albard Espinoza. Last tim
         return count;
     }
 
+    /*This method basically returns the content stored in the
+    instance variables firstName and lastName.*/
     public String toString() {
         return "Name = " + firstName + " " + lastName;
     }
